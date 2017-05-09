@@ -1,0 +1,19 @@
+{
+  "name": "wechat",
+  "version": "1.0.0",
+  "description": "wechat",
+  "main": "app.js",
+  "dependencies": {
+    "koa": "^1.2.0",
+    "koa-static":"^3.0.0",
+    "sha1":"*",
+    "bluebird": "*",
+    "request": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "roy",
+  "license": "ISC"
+}
