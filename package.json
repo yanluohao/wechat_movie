@@ -8,7 +8,9 @@
     "koa-static":"^3.0.0",
     "sha1":"*",
     "bluebird": "*",
-    "request": "*"
+    "request": "*",
+    "raw-body":"*",
+    "xml2js":"*"
   },
   "devDependencies": {},
   "scripts": {

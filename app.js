@@ -10,13 +10,13 @@ var port = 80;
 var config = {
 	wechat: {
 		appID: 'wx544bdb3ac9dac85b',
-		appsecret: 'a1db2a11bda2f8bdb3f87911787d9728',
-		token: 'yanluohao',
+		appSecret: 'a1db2a11bda2f8bdb3f87911787d9728',
+		token: 'yanluohao1',
 		getAccessToken: function () {
 			return util.readFileAsync(wechat_file);
 		},
 		saveAccessToken: function (data) {
-			data=JSON.parse(data)
+			data=JSON.stringify(data)
 			return util.writeFileAsync(wechat_file,data);
 		}
 	}
