@@ -122,9 +122,18 @@ module.exports = function (opts,handler) {
 
             console.log(message);
             //handler是从app.js传进来的wxUtil.reply方法，也就是回复的代码部分
-            yield handler.call(this,next);
+            // yield handler.call(this,next);
+            if(message.MsgType==='event'){
+                if(message.Event==='subscribe'){
+                    this.body=`新来的${message.FromUserName}你好哦`;
+                }
+            }else if(message.MsgType==='text'){
+                if(message.Content='1'){
+                    this.body=`你好啊${message.FromUserName}`;
+                }
+            }
 
-            wechat.reply.call(this);
+            // wechat.reply.call(this);
         }
     }
 }

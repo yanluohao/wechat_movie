@@ -1,4 +1,5 @@
 var koa = require("koa");
+var router = require("koa-route");
 var wechat = require("./wechat/g");
 var path = require("path");
 var util = require("./libs/util");
@@ -16,13 +17,14 @@ var config = {
 			return util.readFileAsync(wechat_file);
 		},
 		saveAccessToken: function (data) {
-			data=JSON.stringify(data)
-			return util.writeFileAsync(wechat_file,data);
+			data = JSON.stringify(data)
+			return util.writeFileAsync(wechat_file, data);
 		}
 	}
 }
 
 app.use(wechat(config.wechat));
+
 
 
 
